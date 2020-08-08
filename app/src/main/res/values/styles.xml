@@ -1,0 +1,654 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Halo">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Halo.Wrapper">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">#ffffff</item>
+        <!--
+        Why would I want to fitsSystemWindows?
+        https://medium.com/google-developers/why-would-i-want-to-fitssystemwindows-4e26d9ce1eec
+        -->
+        <item name="android:fitsSystemWindows">true</item>
+        <!-- Cancel focus edittext when create layout -->
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+
+    <style name="SpinnerTheme" parent="android:Widget.Spinner.DropDown">
+        <item name="android:background">@drawable/bg_spinner</item>
+        <item name="android:textColorHint">@color/halo_edt_background_text_hint_color</item>
+        <item name="android:textColor">@color/halo_theme_text_body_color</item>
+        <item name="android:textSize">@dimen/halo_body2_text_size</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:stateListAnimator">
+            @animator/halo_btn_state_list_anim
+        </item>
+        <item name="rippleColor">@color/halo_btn_ripple_color</item>
+    </style>
+
+    <style name="SpinnerTheme.outLine" parent="SpinnerTheme">
+        <item name="android:background">@drawable/bg_spinner_out_line</item>
+    </style>
+
+    <style name="SpinnerTheme.Background" parent="SpinnerTheme">
+        <item name="android:background">@drawable/bg_spinner_background</item>
+    </style>
+
+    <!--
+    The top app bar displays information and actions relating to the current screen.
+    - Material Design guidelines: Top App Bar
+    https://material.io/go/design-app-bar-top
+
+    - Material Design guidelines: Scrolling techniques
+    https://material.io/go/design-app-bar-top#behavior
+
+    - AppBarLayout is a ViewGroup, most commonly used to wrap a Toolbar,
+    that provides many of the Material Design features and interactions for Top App Bars,
+    namely responsiveness to scrolling.
+    https://material.io/develop/android/components/app-bar-layout/
+    -->
+    <style name="Halo.AppBarLayout" parent="Widget.Design.AppBarLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="elevation">0dp</item>
+    </style>
+
+    <style name="Halo.Toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?actionBarSize</item>
+        <item name="android:background">?colorPrimary</item>
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+
+    </style>
+
+    <style name="Halo.Toolbar.Trasparent" parent="Widget.AppCompat.Toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?actionBarSize</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+    </style>
+
+    <style name="Halo.ToolbarWhite" parent="Widget.AppCompat.Toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?actionBarSize</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+    </style>
+
+    <style name="Halo.CollapsingToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?actionBarSize</item>
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <!--
+     - BottomNavigationView creates bottom navigation bars,
+       making it easy to explore and switch between top-level content views with a single tap.
+       This pattern can be used when you have between 3 and 5 top-level destinations to navigate to.
+       https://material.io/develop/android/components/bottom-navigation-view/
+
+     - Material Design guidelines: Bottom Navigation
+     https://material.io/go/design-bottom-navigation
+
+     TODO: <items name="layout_behavior">@string/bottom_navigation_behavior</items>
+     -->
+    <style name="Halo.BottomNavigation" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemIconTint">@color/bottom_navigation_handling_state_colors</item>
+        <item name="itemTextColor">@color/bottom_navigation_handling_state_colors</item>
+        <item name="elevation">16dp</item>
+        <item name="labelVisibilityMode">unlabeled</item>
+        <item name="android:layout_gravity">bottom</item>
+    </style>
+
+    <!--
+    - TabLayout provides a horizontal layout to display tabs. The layout handles interactions for a group of tabs including:
+        scrolling behavior,
+        (swipe) gestures,
+        tab selection,
+        animations,
+        and alignment.
+      The Android Developers site provides detailed documentation on implementing TabLayout.
+      https://material.io/develop/android/components/tab-layout/
+
+    - Material Design guidelines: Tabs
+    https://material.io/go/design-tabs
+    -->
+    <style name="Halo.TabLayout" parent="TextAppearance.Design.Tab">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="tabIndicatorColor">@color/colorPrimary</item>
+        <item name="tabIconTint">@color/tabs_icon_color_selector_colored</item>
+        <item name="tabGravity">fill</item>
+        <item name="tabMode">scrollable</item>
+        <item name="tabRippleColor">@color/tabs_ribs_ripple_color</item>
+        <item name="tabUnboundedRipple">true</item>
+    </style>
+
+    <style name="Halo.TabLayoutText" parent="Halo.TabLayout">
+        <item name="tabMinWidth">100dp</item>
+        <item name="tabTextAppearance">@style/TabTextAppearance</item>
+    </style>
+
+    <style name="TabTextAppearance" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor" tools:ignore="PrivateResource">
+            @color/tabs_text_color
+        </item>
+    </style>
+
+    <style name="Halo.TabLayoutDesign" parent="TextAppearance.Design.Tab">
+        <item name="tabIndicatorColor">@color/colorPrimary</item>
+        <item name="tabGravity">center</item>
+        <item name="tabMode">scrollable</item>
+        <item name="tabRippleColor">@color/tabs_ribs_ripple_color</item>
+        <item name="tabUnboundedRipple">true</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <!-- Image -->
+
+    <style name="Halo.ImageIcon">
+        <item name="android:layout_width">32dp</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+    <style name="ImgOwnerCircle">
+        <item name="android:layout_width">@dimen/owner_avatar_circle</item>
+        <item name="android:layout_height">@dimen/owner_avatar_circle</item>
+        <item name="android:background">@drawable/avatar_circle</item>
+    </style>
+
+    <!-- TextView -->
+
+    <style name="Halo.TextView" />
+
+    <style name="Halo.TextViewBackground">
+        <item name="android:background">@drawable/halo_edt_background</item>
+        <item name="android:textColorHint">@color/halo_edt_background_text_hint_color</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Body2</item>
+        <item name="android:textColor">@color/halo_theme_text_body_color</item>
+        <item name="android:textSize">@dimen/halo_body2_text_size</item>
+    </style>
+
+    <style name="Halo.TextViewBackground.Select" parent="Halo.TextViewBackground">
+        <item name="android:background">@drawable/halo_edt_background_select</item>
+        <item name="android:stateListAnimator">@animator/halo_btn_state_list_anim</item>
+    </style>
+
+    <style name="Halo.TextView.Body2">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Body2</item>
+        <item name="android:textColor">@color/halo_theme_text_body_color</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/halo_body2_text_size</item>
+    </style>
+
+    <style name="Halo.TextView.Body2.OneLine">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/halo_body2_text_size</item>
+    </style>
+
+    <style name="Halo.TextView.Body2.Header">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Halo.TextView.Body2.UserName">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Halo.TextView.Caption" parent="Halo.TextView.Body2">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Caption</item>
+        <item name="android:textColor">@color/halo_theme_text_secondary_color</item>
+        <item name="android:textSize">@dimen/halo_caption_text_size</item>
+    </style>
+
+    <style name="Halo.TextView.Caption.Light">
+        <item name="android:textColor">@color/halo_theme_text_light_color</item>
+        <item name="android:textSize">@dimen/halo_caption_text_size</item>
+    </style>
+
+    <style name="Halo.TextView.Caption.Lighter">
+        <item name="android:textColor">@color/halo_theme_text_lighter_color</item>
+        <item name="android:textSize">@dimen/halo_caption_text_size</item>
+    </style>
+
+    <style name="Halo.TextView.Caption.OneLine" parent="Halo.TextView.Body2.OneLine">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Caption</item>
+        <item name="android:textColor">@color/halo_theme_text_secondary_color</item>
+        <item name="android:textSize">@dimen/halo_caption_text_size</item>
+    </style>
+
+    <style name="Halo.TextView.Caption.Light.OneLine">
+        <item name="android:textColor">@color/halo_theme_text_light_color</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/halo_caption_text_size</item>
+    </style>
+
+    <style name="Halo.TextView.Caption.Lighter.OneLine">
+        <item name="android:textColor">@color/halo_theme_text_lighter_color</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/halo_caption_text_size</item>
+    </style>
+
+    <style name="Halo.TextView.Body1">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Body1</item>
+        <item name="android:textColor">@color/halo_theme_text_dark_color</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="Halo.TextView.Body1.OneLine">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="Halo.TextView.BottomMenu" parent="Halo.TextView.Body2">
+        <item name="android:drawablePadding">@dimen/single_line_drawable_padding_item</item>
+        <item name="android:layout_height">@dimen/single_line_large_item</item>
+        <item name="android:textSize">@dimen/halo_body2_text_size</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:background">?selectableItemBackground</item>
+    </style>
+
+    <style name="Halo.TextView.BottomMenuCaption" parent="Halo.TextView.Caption">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">72dp</item>
+    </style>
+
+    <style name="Halo.TextView.Header">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline6
+        </item>
+        <item name="android:textColor">@color/halo_theme_text_dark_color</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="Price" parent="Halo.TextView.Body2.Header">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/price</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="PromotionFix" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:textColor">@color/promotion</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="PromotionPer" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="HaloBodyShort" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:textColor">@color/halo_theme_text_dark_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/halo_body2_short_text_size</item>
+    </style>
+
+    <style name="HaloBodyLong" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:textColor">@color/halo_theme_text_body_color</item>
+        <item name="android:textSize">@dimen/halo_body2_text_size</item>
+    </style>
+
+    <!-- EditText -->
+
+    <style name="Halo.EditText.Body2" parent="Halo.TextView.Body2">
+        <item name="android:textColorHint">@color/halo_theme_text_light_color</item>
+        <item name="android:textSize">@dimen/halo_body2_text_size</item>
+    </style>
+
+    <style name="Halo.EditTextBackground" parent="Base.Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/halo_edt_background</item>
+        <item name="android:textColorHint">@color/halo_edt_background_text_hint_color</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Body2</item>
+        <item name="android:textColor">@color/halo_theme_text_body_color</item>
+        <item name="android:textSize">@dimen/halo_body2_text_size</item>
+        <item name="android:inputType">textCapWords</item>
+    </style>
+
+    <style name="Halo.EditTextBackgroundWhite" parent="Base.Widget.AppCompat.EditText">
+        <item name="android:background">@color/white_transparency</item>
+        <item name="android:textColorHint">@color/halo_edt_background_text_hint_color</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Body2</item>
+        <item name="android:textColor">@color/halo_theme_text_body_color</item>
+        <item name="android:textSize">@dimen/halo_body2_text_size</item>
+    </style>
+
+    <style name="Halo.EditTextBackground.OneLine" parent="Halo.EditTextBackground">
+        <item name="android:ems">10</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/halo_body2_text_size</item>
+    </style>
+
+    <!-- Button -->
+
+    <style name="Halo.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/halo_btn_padding_left</item>
+        <item name="android:paddingRight">@dimen/halo_btn_padding_right</item>
+        <item name="android:paddingTop">@dimen/halo_btn_padding_top</item>
+        <item name="android:paddingBottom">@dimen/halo_btn_padding_bottom</item>
+        <item name="android:insetTop">@dimen/halo_btn_inset</item>
+        <item name="android:insetBottom">@dimen/halo_btn_inset</item>
+        <item name="android:stateListAnimator">
+            @animator/halo_btn_state_list_anim
+        </item>
+        <item name="cornerRadius">@dimen/halo_btn_corner_radius</item>
+        <item name="iconPadding">@dimen/halo_btn_icon_padding</item>
+        <item name="rippleColor">@color/halo_btn_ripple_color</item>
+        <item name="backgroundTint">@color/halo_btn_bg_color_selector</item>
+    </style>
+
+    <style name="Halo.ButtonDark">parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/halo_btn_padding_left</item>
+        <item name="android:paddingRight">@dimen/halo_btn_padding_right</item>
+        <item name="android:paddingTop">@dimen/halo_btn_padding_top</item>
+        <item name="android:paddingBottom">@dimen/halo_btn_padding_bottom</item>
+        <item name="android:insetTop">@dimen/halo_btn_inset</item>
+        <item name="android:insetBottom">@dimen/halo_btn_inset</item>
+        <item name="android:stateListAnimator">
+            @animator/halo_btn_state_list_anim
+        </item>
+        <item name="cornerRadius">@dimen/halo_btn_corner_radius</item>
+        <item name="iconPadding">@dimen/halo_btn_icon_padding</item>
+        <item name="rippleColor">@color/halo_btn_ripple_color</item>
+        <item name="backgroundTint">@color/halo_btn_bg_color_dark_selector</item>
+    </style>
+
+    <style name="Halo.ButtonPrice" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/halo_btn_padding_left</item>
+        <item name="android:paddingRight">@dimen/halo_btn_padding_right</item>
+        <item name="android:paddingTop">@dimen/halo_btn_padding_top</item>
+        <item name="android:paddingBottom">@dimen/halo_btn_padding_bottom</item>
+        <item name="android:insetTop">@dimen/halo_btn_inset</item>
+        <item name="android:insetBottom">@dimen/halo_btn_inset</item>
+        <item name="android:stateListAnimator">
+            @animator/halo_btn_state_list_anim
+        </item>
+        <item name="cornerRadius">@dimen/halo_btn_corner_radius</item>
+        <item name="iconPadding">@dimen/halo_btn_icon_padding</item>
+        <item name="rippleColor">@color/halo_btn_ripple_color</item>
+        <item name="backgroundTint">@color/halo_btn_bg_color_price_selector</item>
+    </style>
+
+    <style name="Halo.Button.Warning" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/halo_btn_padding_left</item>
+        <item name="android:paddingRight">@dimen/halo_btn_padding_right</item>
+        <item name="android:paddingTop">@dimen/halo_btn_padding_top</item>
+        <item name="android:paddingBottom">@dimen/halo_btn_padding_bottom</item>
+        <item name="android:insetTop">@dimen/halo_btn_inset</item>
+        <item name="android:insetBottom">@dimen/halo_btn_inset</item>
+        <item name="android:stateListAnimator">
+            @animator/halo_btn_state_list_anim
+        </item>
+        <item name="cornerRadius">@dimen/halo_btn_corner_radius</item>
+        <item name="iconPadding">@dimen/halo_btn_icon_padding</item>
+        <item name="rippleColor">@color/booking_item_warning_bg_color</item>
+        <item name="backgroundTint">@color/booking_item_warning_text_color</item>
+    </style>
+
+
+    <style name="Halo.Accent" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/halo_btn_padding_left</item>
+        <item name="android:paddingRight">@dimen/halo_btn_padding_right</item>
+        <item name="android:paddingTop">@dimen/halo_btn_padding_top</item>
+        <item name="android:paddingBottom">@dimen/halo_btn_padding_bottom</item>
+        <item name="android:insetTop">@dimen/halo_btn_inset</item>
+        <item name="android:insetBottom">@dimen/halo_btn_inset</item>
+        <item name="android:stateListAnimator">
+            @animator/halo_btn_state_list_anim
+        </item>
+        <item name="cornerRadius">@dimen/halo_btn_corner_radius</item>
+        <item name="iconPadding">@dimen/halo_btn_icon_padding</item>
+        <item name="rippleColor">@color/halo_btn_ripple_color</item>
+        <item name="backgroundTint">@color/halo_btn_bg_color_selector</item>
+    </style>
+
+    <style name="Halo.OutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/halo_btn_padding_left</item>
+        <item name="android:paddingRight">@dimen/halo_btn_padding_right</item>
+        <item name="strokeColor">@color/halo_btn_stroke_color_selector</item>
+        <item name="strokeWidth">@dimen/halo_btn_stroke_size</item>
+        <item name="cornerRadius">@dimen/halo_btn_corner_radius</item>
+        <item name="android:insetTop">@dimen/halo_btn_inset</item>
+        <item name="android:insetBottom">@dimen/halo_btn_inset</item>
+        <item name="android:textColor">@color/halo_btn_outline_text_color_selector</item>
+    </style>
+
+    <style name="Halo.ButtonTransparent" parent="Base.Widget.AppCompat.ImageButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:radius">30dp</item>
+        <item name="android:textColor">@color/halo_btn_outline_text_color_selector</item>
+        <item name="rippleColor">@color/halo_btn_ripple_color</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Halo.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Social" />
+
+    <style name="Social.Action" parent="Halo.TextView.Caption.OneLine">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">47dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Reaction">
+        <item name="android:layout_width">36dp</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginRight">4dp</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+    </style>
+
+    <!-- List -->
+
+    <style name="SingleLineList">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/single_line_item</item>
+        <item name="android:paddingLeft">@dimen/single_line_drawable_padding_item</item>
+        <item name="android:paddingStart">@dimen/single_line_drawable_padding_item</item>
+    </style>
+
+    <style name="SingleLineLargeList" parent="SingleLineList">
+        <item name="android:layout_height">@dimen/single_line_large_item</item>
+    </style>
+
+    <style name="SingleListRadio" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/single_line_large_item</item>
+        <item name="android:paddingLeft">@dimen/single_line_drawable_padding_item</item>
+        <item name="android:paddingStart">@dimen/single_line_drawable_padding_item</item>
+    </style>
+
+    <style name="TwoLineList">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/two_line_item</item>
+        <item name="android:paddingLeft">@dimen/two_line_drawable_padding_item</item>
+        <item name="android:paddingStart">@dimen/two_line_drawable_padding_item</item>
+    </style>
+
+    <style name="TwoLineLargeList" parent="TwoLineList">
+        <item name="android:layout_height">@dimen/two_line_large_item</item>
+    </style>
+
+    <!-- Material dialog -->
+
+    <style name="MD_Light" parent="Theme.AppCompat.Light.Dialog.Alert" tools:ignore="PrivateResource">
+        <item name="android:windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+
+        <item name="android:actionModeBackground">@color/primary_material_dark</item>
+        <item name="android:actionModeCloseDrawable">@drawable/md_nav_back</item>
+
+        <item name="android:windowAnimationStyle">@style/MD_WindowAnimation</item>
+        <item name="android:backgroundDimEnabled">true</item>
+
+        <item name="md_divider_color">@color/md_divider_light_theme</item>
+        <item name="md_item_selector">@drawable/md_item_selector</item>
+        <item name="md_button_selector">@drawable/md_btn_selector</item>
+    </style>
+
+    <style name="MD_Dark" parent="Theme.AppCompat.Dialog.Alert" tools:ignore="PrivateResource">
+        <item name="android:windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+
+        <item name="android:actionModeBackground">@color/primary_material_dark</item>
+        <item name="android:actionModeCloseDrawable">@drawable/md_nav_back</item>
+
+        <item name="android:windowAnimationStyle">@style/MD_WindowAnimation</item>
+        <item name="android:backgroundDimEnabled">true</item>
+
+        <item name="md_divider_color">@color/md_divider_dark_theme</item>
+        <item name="md_item_selector">@drawable/md_item_selector_dark</item>
+        <item name="md_button_selector">@drawable/md_btn_selector_dark</item>
+    </style>
+
+    <style name="MD_WindowAnimation">
+        <item name="android:windowEnterAnimation">@anim/popup_enter</item>
+        <item name="android:windowExitAnimation">@anim/popup_exit</item>
+    </style>
+
+    <style name="MD_Dialog_Title_Text" parent="Halo.TextView.Body2">
+        <item name="android:textColor">@color/halo_theme_text_dark_color</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MD_Dialog_Message" parent="Halo.TextView.Body2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/md_dialog_frame_margin_horizontal</item>
+        <item name="android:paddingRight">@dimen/md_dialog_frame_margin_horizontal</item>
+    </style>
+
+    <style name="MD_Dialog_ScrollView_FrameContent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="MD_ActionButton" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="MD_ListItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center_vertical|start</item>
+        <item name="android:minHeight">@dimen/md_listitem_height</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="MD_ListItemText" tools:ignore="NewApi">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:layout_gravity">start|center_vertical</item>
+        <item name="android:layout_marginTop">@dimen/md_listitem_vertical_margin</item>
+        <item name="android:layout_marginBottom">@dimen/md_listitem_vertical_margin</item>
+        <item name="android:layout_marginLeft">@dimen/md_listitem_margin_left</item>
+        <item name="android:layout_marginStart">@dimen/md_listitem_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/md_dialog_frame_margin_horizontal</item>
+        <item name="android:layout_marginEnd">@dimen/md_dialog_frame_margin_horizontal</item>
+        <item name="android:textSize">@dimen/md_listitem_textsize</item>
+        <item name="android:textColor">@color/md_list_item_textcolor</item>
+    </style>
+
+    <style name="MD_ListItem.Choice">
+        <item name="android:background">?selectableItemBackground</item>
+        <item name="android:descendantFocusability">blocksDescendants</item>
+        <item name="android:focusable">true</item>
+        <item name="android:minHeight">@dimen/md_listitem_height</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingLeft">@dimen/md_dialog_frame_margin_horizontal</item>
+        <item name="android:paddingRight">@dimen/md_dialog_frame_margin_horizontal</item>
+    </style>
+
+    <style name="MD_ListItem_Control">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@null</item>
+        <item name="android:clickable">false</item>
+        <item name="android:focusable">false</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:layout_gravity">start|center_vertical</item>
+    </style>
+
+    <style name="MD_ListItemText.Choice" tools:ignore="NewApi">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:layout_gravity">start|center_vertical</item>
+        <item name="android:minHeight">@dimen/md_listitem_height</item>
+        <item name="android:paddingBottom">@dimen/md_listitem_vertical_margin_choice</item>
+        <item name="android:paddingLeft">@dimen/md_listitem_control_margin</item>
+        <item name="android:paddingStart">@dimen/md_listitem_control_margin</item>
+        <item name="android:paddingTop">@dimen/md_listitem_vertical_margin_choice</item>
+        <item name="android:textSize">@dimen/md_listitem_textsize</item>
+        <item name="android:textColor">@color/md_list_item_textcolor</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+    </style>
+
+    <style name="Halo.SpinnerDropDownItemStyle" parent="Widget.AppCompat.DropDownItem.Spinner">
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingLeft">24dp</item>
+        <item name="android:paddingRight">24dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/halo_theme_text_body_color</item>
+        <item name="android:textSize">@dimen/halo_body2_text_size</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:dropDownSelector">@color/halo_edt_background_solid</item>
+        <item name="android:dropDownAnchor">@color/halo_edt_background_text_hint_color</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ /*
+  ~  * Copyright 10/10/2018 Hahalolo. All rights reserved.
+  ~  *
+  ~  * https://help.hahalolo.com/commercial_terms/
+  ~  */
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            style="@style/Halo.AppBarLayout">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                style="@style/Halo.Toolbar"
+                app:navigationIcon="@drawable/ic_back"
+                app:title="Payout Account" />
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="64dp">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/wallet_title_tv"
+                    style="@style/TextAppearance.MaterialComponents.Headline4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="24dp"
+                    android:paddingBottom="24dp"
+                    android:text="Payout Account" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/start_date_bt"
+                    style="@style/Halo.TextViewBackground.Select"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:drawableEnd="@drawable/state_list_calendar"
+                    android:drawableRight="@drawable/state_list_calendar"
+                    android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
+                    android:hint="Start date"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/end_date_bt"
+                    style="@style/Halo.TextViewBackground.Select"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:drawableEnd="@drawable/state_list_calendar"
+                    android:drawableRight="@drawable/state_list_calendar"
+                    android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
+                    android:hint="End date"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp" />
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    style="@style/SpinnerTheme.Background"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:paddingLeft="6dp"
+                    app:contentPaddingTop="160dp"
+                    />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/payout_account_rec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false">
+
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/bg_bottom_layout"
+            android:paddingStart="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingTop="@dimen/activity_horizontal_margin"
+            android:paddingEnd="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin"
+            android:paddingBottom="12dp">
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/create_payout_account_btn"
+                style="@style/Halo.ButtonPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Create" />
+        </FrameLayout>
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

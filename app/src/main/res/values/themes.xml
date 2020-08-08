@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /*
+  ~  * Copyright 10/10/2018 Hahalolo. All rights reserved.
+  ~  *
+  ~  * https://help.hahalolo.com/commercial_terms/
+  ~  */
+  -->
+
+<resources>
+    <!--
+    ~ The color system
+    ~ The Material Design color system can be used to create a color theme that reflects your brand or style.
+    ~ https://material.io/design/color/the-color-system.html#
+    ~
+    ~ COLOR TOOL
+    ~ Create, share, and apply color palettes to your UI, as well as measure the accessibility level of any color combination.
+    ~ https://material.io/tools/color/#!/?view.left=0&view.right=0
+    -->
+
+    <style name="Theme.Halo" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+
+    <style name="Theme.Start" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <style name="Theme.HaloDatePicker" parent="Theme.MaterialComponents.Light.Dialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:calendarViewShown">false</item>
+    </style>
+
+    <style name="AnimationActivity" parent="@android:style/Animation.Translucent">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+    <style name="HaloCheckBox" parent="Theme.Halo">
+        <item name="colorControlNormal">@color/halo_theme_text_secondary_color</item>
+        <item name="colorControlActivated">?colorPrimary</item>
+    </style>
+
+    <style name="Theme.Cropper" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Theme.Halo.Slidr" parent="Theme.Halo">
+        <!-- These values must be set for this mechanism to work -->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="Theme.Halo.Search" parent="Theme.Halo">
+        <item name="colorControlActivated">@android:color/white</item>
+    </style>
+</resources>

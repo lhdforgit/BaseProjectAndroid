@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ /*
+  ~  * Copyright 10/10/2018 Hahalolo. All rights reserved.
+  ~  *
+  ~  * https://help.hahalolo.com/commercial_terms/
+  ~  */
+  -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+
+        <layer-list>
+
+            <item>
+                <shape>
+
+                    <padding android:bottom="@dimen/halo_edt_padding_bottom" android:left="@dimen/halo_edt_padding_left" android:right="@dimen/halo_edt_padding_right" android:top="@dimen/halo_edt_padding_top" />
+
+                </shape>
+            </item>
+            <item android:drawable="@drawable/ic_menu_down_arrow" android:gravity="right|center_vertical" android:right="8dp"></item>
+
+        </layer-list>
+
+    </item>
+
+</selector>

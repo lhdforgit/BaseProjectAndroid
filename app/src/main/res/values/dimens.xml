@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /*
+  ~  * Copyright 10/10/2018 Hahalolo. All rights reserved.
+  ~  *
+  ~  * https://help.hahalolo.com/commercial_terms/
+  ~  */
+  -->
+
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_horizontal_margin_large">32dp</dimen>
+    <dimen name="activity_vertical_margin_large">32dp</dimen>
+    <dimen name="activity_margin_gradient">48dp</dimen>
+    <dimen name="activity_normal">16sp</dimen>
+    <dimen name="activity_normal_plus">18sp</dimen>
+    <dimen name="activity_small">8sp</dimen>
+    <dimen name="activity_lage">32sp</dimen>
+    <dimen name="activity_normal_x">6sp</dimen>
+
+    <dimen name="activity_normal_s">16dp</dimen>
+    <dimen name="activity_small_s">8dp</dimen>
+    <dimen name="activity_lage_s">32dp</dimen>
+    <dimen name="activity_normal_x_s">6dp</dimen>
+
+    <dimen name="divider">0.5dp</dimen>
+    <dimen name="img_border">0.5dp</dimen>
+    <dimen name="img_border_padding">1dp</dimen>
+    <dimen name="owner_avatar_circle">48dp</dimen>
+    <dimen name="owner_avatar_circle_sub">36dp</dimen>
+    <dimen name="sub_height">48dp</dimen>
+    <dimen name="menu_item_height">56dp</dimen>
+
+    <dimen name="halo_body2_text_size">15sp</dimen>
+    <dimen name="halo_body2_short_text_size">27sp</dimen>
+    <dimen name="halo_caption_text_size">13sp</dimen>
+
+    <dimen name="player_control">48dp</dimen>
+
+    <!-- List -->
+    <dimen name="list_image_item">40dp</dimen>
+    <dimen name="single_line_item">48dp</dimen>
+    <dimen name="single_line_large_item">56dp</dimen>
+    <dimen name="single_line_drawable_padding_item">32dp</dimen>
+    <dimen name="two_line_item">64dp</dimen>
+    <dimen name="two_line_large_item">72dp</dimen>
+    <dimen name="two_line_drawable_padding_item">16dp</dimen>
+    <dimen name="three_line_item">88dp</dimen>
+    <dimen name="three_line_drawable_padding_item">16dp</dimen>
+    <dimen name="collapsed_expanded_item">48dp</dimen>
+    <dimen name="collapsed_expanded_padding_item">72dp</dimen>
+
+    <!-- Button -->
+    <dimen name="halo_btn_padding_bottom">0dp</dimen>
+    <dimen name="halo_btn_padding_left">16dp</dimen>
+    <dimen name="halo_btn_padding_right">16dp</dimen>
+    <dimen name="halo_btn_padding_top">0dp</dimen>
+    <dimen name="halo_btn_inset">2dp</dimen>
+    <dimen name="halo_btn_pressed_z">6dp</dimen>
+    <dimen name="halo_btn_corner_radius">25dp</dimen>
+    <dimen name="halo_btn_dialog_btn_min_width">64dp</dimen>
+    <dimen name="halo_btn_disabled_elevation">0dp</dimen>
+    <dimen name="halo_btn_disabled_z">0dp</dimen>
+    <dimen name="halo_btn_elevation">0dp</dimen>
+    <dimen name="halo_btn_focused_z">2dp</dimen>
+    <dimen name="halo_btn_hovered_z">2dp</dimen>
+    <dimen name="halo_btn_icon_padding">8dp</dimen>
+    <dimen name="halo_btn_z">0dp</dimen>
+    <dimen name="halo_btn_additional_padding_start_for_icon">-4dp</dimen>
+    <dimen name="halo_btn_additional_padding_end_for_icon">0dp</dimen>
+    <dimen name="halo_btn_stroke_size">1dp</dimen>
+
+    <!-- EditText -->
+    <dimen name="halo_edt_corner_radius">25dp</dimen>
+    <dimen name="halo_edt_padding_bottom">0dp</dimen>
+    <dimen name="halo_edt_padding_left">16dp</dimen>
+    <dimen name="halo_edt_padding_right">16dp</dimen>
+    <dimen name="halo_edt_padding_top">0dp</dimen>
+
+    <!-- Material dialog -->
+    <dimen name="md_dialog_default_corner_radius">2dp</dimen>
+    <dimen name="md_dialog_max_width">356dp</dimen>
+    <dimen name="md_dialog_vertical_margin">52dp</dimen>
+    <dimen name="md_dialog_horizontal_margin">32dp</dimen>
+
+    <dimen name="md_dialog_title_layout_margin_bottom">20dp</dimen>
+    <dimen name="md_dialog_frame_margin_vertical">24dp</dimen>
+    <dimen name="md_dialog_frame_margin_vertical_less">16dp</dimen>
+    <dimen name="md_dialog_frame_margin_horizontal">24dp</dimen>
+
+    <dimen name="md_action_button_frame_padding_neutral">18dp</dimen>
+    <dimen name="md_action_button_frame_padding">8dp</dimen>
+
+    <dimen name="md_action_button_height">48dp</dimen>
+    <dimen name="md_action_button_min_width">64dp</dimen>
+    <dimen name="md_action_button_padding_horizontal">8dp</dimen>
+    <dimen name="md_action_button_spacing">8dp</dimen>
+    <dimen name="md_action_button_corner_radius">2dp</dimen>
+    <dimen name="md_action_button_textsize">14sp</dimen>
+
+    <dimen name="md_stacked_action_button_height">48dp</dimen>
+    <dimen name="md_stacked_action_button_padding_horizontal">16dp</dimen>
+
+    <dimen name="md_title_textsize">20sp</dimen>
+    <dimen name="md_message_textsize">16sp</dimen>
+
+    <dimen name="md_icon_margin">12dp</dimen>
+    <dimen name="md_icon_size">42dp</dimen>
+
+    <dimen name="md_listitem_vertical_margin">12dp</dimen>
+    <dimen name="md_listitem_vertical_margin_choice">8dp</dimen>
+    <dimen name="md_listitem_textsize">16sp</dimen>
+    <dimen name="md_listitem_height">48dp</dimen>
+    <dimen name="md_listitem_control_margin">6dp</dimen>
+    <dimen name="md_listitem_margin_left">24dp</dimen>
+
+    <dimen name="md_checkbox_prompt_margin_horizontal">16dp</dimen>
+    <dimen name="md_checkbox_prompt_margin_vertical">10dp</dimen>
+    <dimen name="md_divider_height">1dp</dimen>
+</resources>

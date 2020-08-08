@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Hahalolo Wallet</string>
+
+    <string name="name_format">%1$s %2$s</string>
+
+    <!-- Login -->
+    <string name="sign_in_username_hint">Phone Number or Email</string>
+    <string name="sign_in_password_hint">Password</string>
+    <string name="login_handler_button">Login</string>
+    <string name="sign_in_username_error_null">Phone number or email have required …</string>
+    <string name="sign_in_username_error_phone_email_regex">Please enter mobile phone or email</string>
+    <string name="sign_in_password_error_null">Password have required …</string>
+    <string name="error_login_message">Sign in account incorrect or does not exist. Do you want to create a new account?</string>
+    <string name="error_login_positive">Create account?</string>
+    <string name="error_login_negative">Try again</string>
+
+    <!-- Error notification -->
+    <string name="error_positive_action_ok">@android:string/ok</string>
+    <string name="error_positive_action_try_again">try again</string>
+    <string name="error_negative_action_cancel">@android:string/cancel</string>
+    <string name="error_bad_request_title">Bad request</string>
+    <string name="error_bad_request_message">The server cannot or will not process the request due to an apparent client error</string>
+    <string name="error_unauthorized_title">Authentication failed</string>
+    <string name="error_unauthorized_message">Your sign-in session has expired. Please sign-in again</string>
+    <string name="error_forbidden_title">Forbidden</string>
+    <string name="error_forbidden_message">The request was valid, but the server is refusing action. The user might not have the necessary permissions for a resource, or may need an account of some sort.</string>
+    <string name="error_not_found_title">Not Found</string>
+    <string name="error_not_found_message">The requested resource could not be found but may be available in the future. Subsequent requests by the client are permissible.</string>
+    <string name="error_not_allowed_title">Method Not Allowed</string>
+    <string name="error_not_allowed_message">A request method is not supported for the requested resource</string>
+    <string name="error_not_accepttable_title">Not Acceptable</string>
+    <string name="error_not_accepttable_message">The requested resource is capable of generating only content not acceptable according to the Accept headers sent in the request.</string>
+    <string name="error_proxy_require_title">Proxy Authentication Required</string>
+    <string name="error_proxy_require_message">The client must first authenticate itself with the proxy.</string>
+    <string name="error_request_timeout_message">Request Timeout</string>
+    <string name="error_network_request_failed_message">A network error has occurred</string>
+    <string name="error_internal_message">Something went wrong. Please try again.</string>
+    <string name="error_email_exist_message">The email address or phone number is already used by another account</string>
+    <string name="error_phone_exist_message">The phone number is already used by another account</string>
+    <string name="error_no_param_message">Enter fill all field to continue</string>
+
+    <!-- Main -->
+    <string name="main_current_price">Current available %1$s %2$s</string>
+    <string name="main_current_price_total">Current available %1$s</string>
+
+    <!-- Payout Account -->
+    <string name="create_payout_account_tax_form_desctipton">Based on the information you provided yout aran\'t required to upload any tax forms. Please click \"Next\" to proceed to the next step.</string>
+    <string name="create_payout_account_add_payment_method_checkbox_1">I hereby authorize Hahalolo to provide direct deposit of any payments due in the above designated bank information</string>
+    <string name="create_payout_account_add_payment_method_checkbox_2">Under penalties of perjury, I certify that:/n1. The number entered in this flow id my correct taxpayer identification number (or I am watting for a number to be issued to me)...</string>
+</resources>

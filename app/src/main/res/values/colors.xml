@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--
+    Override default color of material components
+    Fix bug Attribute to customize Bounding box stroke
+    https://github.com/material-components/material-components-android/issues/112
+    -->
+    <color name="mtrl_textinput_default_box_stroke_color" tools:ignore="PrivateResource" tools:override="true">
+        #FFFFFF
+    </color>
+    <color name="colorProgessDialog">#FFFFFF</color>
+
+    <!-- Android material design https://material.io/design/ -->
+    <!-- Android material design color https://material.io/tools/color/#!/?view.left=1&view.right=1&primary.color=166987 -->
+
+    <color name="colorPrimary" tools:ignore="MissingDefaultResource">#166987</color>
+    <color name="colorPrimaryDark">@color/colorPrimary</color>
+    <color name="colorPrimaryLight">#5197b7</color>
+    <color name="colorAccent">@color/colorPrimary</color>
+    <color name="colorWhite">#ffffff</color>
+
+    <color name="newsfeed_menu_group_item_color_primary">#176885</color>
+
+    <!-- Common -->
+
+    <color name="divider">#f4f4f4</color>
+    <color name="feed_divider">#e5e5e5</color>
+    <color name="img_holder">#f2f4f6</color>
+    <color name="img_border">#f0f1f2</color>
+
+    <color name="shimmer_light">#16000000</color>
+    <color name="shimmer_color_default">#e3e1e3</color>
+
+    <color name="read_more">#F0F0F0</color>
+    <color name="link">#166987</color>
+    <color name="price">#47a217</color>
+    <color name="topic">#47A216</color>
+    <color name="promotion">#EE4400</color>
+    <color name="remove">#EE4400</color>
+
+    <color name="halo_theme_text_primary_color">#166986</color>
+    <color name="halo_theme_text_focus_color">#47A216</color>
+    <color name="halo_theme_text_dark_color">#343947</color>
+    <color name="halo_theme_text_body_color">#4C5264</color>
+    <color name="halo_theme_text_secondary_color">#636878</color>
+    <color name="halo_theme_text_light_color">#9EA1AB</color>
+    <color name="halo_theme_text_lighter_color">#BBBDC4</color>
+
+    <!-- Order -->
+    <color name="booking_header">#4C5264</color>
+    <color name="booking_payment_price">#EEEEEE</color>
+    <color name="booking_payment_button">#EE4400</color>
+    <color name="booking_item_agent_finish_header">#EEEEEE</color>
+    <color name="booking_item_agent_warning_header">#FFF1C5</color>
+    <color name="booking_item_agent_payment_price">#EE4400</color>
+    <color name="booking_item_agent_payment_button">#47A216</color>
+    <color name="item_warning_header">#BBBDC4</color>
+    <color name="booking_item_warning_header">#FFF1C5</color>
+    <color name="booking_item_warning_text_color">#F6A609</color>
+    <color name="booking_item_warning_bg_color">#FEFBEE</color>
+    <color name="booking_item_warning_border_color">#FFB92D</color>
+    <color name="booking_item_finish_text_color">#47A216</color>
+    <color name="booking_item_finish_border_color">#47A216</color>
+    <color name="booking_item_finish_bg_color">#F7FFF2</color>
+
+    <!-- Button -->
+    <color name="halo_btn_text_color_disabled">#61000000</color>
+    <color name="halo_btn_bg_color_disabled">#1F000000</color>
+
+    <!-- EditText -->
+    <color name="halo_edt_background_solid">#F1F6F8</color>
+    <color name="halo_edt_background_text_hint_color">#BBBDC4</color>
+
+    <!-- Reaction -->
+    <color name="like_reaction_like_color">#166987</color>
+    <color name="like_reaction_love_color">#f25268</color>
+    <color name="like_reaction_haha_color">#ffd972</color>
+    <color name="like_reaction_wow_color">#ffd972</color>
+    <color name="like_reaction_sorry_color">#ffd972</color>
+    <color name="like_reaction_angry_color">#f7836c</color>
+
+    <!-- Material dialog -->
+    <color name="md_btn_selected">@color/halo_theme_text_body_color</color>
+    <color name="md_btn_selected_dark">@color/halo_theme_text_dark_color</color>
+
+    <color name="md_divider_light_theme">#E0E0E0</color>
+    <color name="md_divider_dark_theme">#3B3C3F</color>
+
+    <color name="md_disabled_text_light_theme">@color/halo_theme_text_secondary_color</color>
+    <color name="md_disabled_text_dark_theme">@color/halo_theme_text_light_color</color>
+
+    <!-- Chips -->
+    <color name="colorChipViewBackground">#E0E0E0</color>
+    <color name="chips_opened_bg">#009688</color>
+    <color name="colorCloseChip">#ababab</color>
+    <color name="white_transparency">#b9ffffff</color>
+
+    <color name="chip_background">#E0E0E0</color>
+    <color name="chip_details_background">#00B8D4</color>
+    <color name="chip_focused_text_color">#FFFFFF</color>
+    <color name="chip_text_color">#DB000000</color>
+    <color name="chip_icon_color">#8C000000</color>
+
+    <!--badges-->
+    <color name="badges_red">#C62828</color>
+
+    <!--back ic-->
+    <color name="back_dark">#8C000000</color>
+    <color name="back_light">#ffffff</color>
+
+    <!--editor bg-->
+    <color name="primary_light">#F1F6F8</color>
+
+    <!--uCrop Activity-->
+    <color name="ucrop_color_toolbar">#FF6E40</color>
+    <color name="ucrop_color_statusbar">#CC5833</color>
+    <color name="ucrop_color_toolbar_widget">#fff</color>
+    <color name="ucrop_color_widget">#000</color>
+    <color name="ucrop_color_widget_active">#FF6E40</color>
+    <color name="ucrop_color_widget_background">#fff</color>
+    <color name="ucrop_color_widget_text">#000</color>
+    <color name="ucrop_color_progress_wheel_line">#808080</color>
+    <color name="ucrop_color_crop_background">#000</color>
+
+    <!--Crop View-->
+    <color name="ucrop_color_default_crop_grid">#80ffffff</color>
+    <color name="ucrop_color_default_crop_frame">#ffffff</color>
+    <color name="ucrop_color_default_dimmed">#8c000000</color>
+    <color name="ucrop_color_default_logo">#4f212121</color>
+
+    <!--elevent shadow-->
+    <color name="gray">#9EA1AB</color>
+    <color name="gray_light">#BBBDC4</color>
+
+    <color name="card_white">#ffffff</color>
+    <color name="card_black">#001129</color>
+    <color name="card_blue">#009bde</color>
+    <color name="card_light_gray">#6d6d6d</color>
+    <color name="card_expiration_date_sheet_background_light">#eceff0</color>
+    <color name="card_expiration_date_sheet_background_dark">#20272b</color>
+    <color name="card_black_12">#1e000000</color>
+    <color name="card_white_12">#1effffff</color>
+    <color name="card_black_38">#61000000</color>
+    <color name="card_white_38">#61ffffff</color>
+    <color name="card_black_54">#8a000000</color>
+    <color name="card_white_54">#8affffff</color>
+    <color name="card_black_87">#de000000</color>
+    <color name="card_white_87">#deffffff</color>
+
+    <color name="transparent">#00000000</color>
+</resources>

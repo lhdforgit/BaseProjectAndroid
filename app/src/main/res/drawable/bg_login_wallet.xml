@@ -1,0 +1,44 @@
+<!--
+  ~ /*
+  ~  * Copyright 10/10/2018 Hahalolo. All rights reserved.
+  ~  *
+  ~  * https://help.hahalolo.com/commercial_terms/
+  ~  */
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="90dp"
+    android:height="160dp"
+    android:viewportWidth="90"
+    android:viewportHeight="160">
+  <path
+      android:pathData="M0,0h90v160h-90z"
+      android:fillColor="#3D94B3"/>
+  <group>
+    <clip-path android:pathData="M0,0h90v160h-90z M 0,0"/>
+    <path
+        android:pathData="M-14.7,151.2l-0.4,2l0.4,1.5c0.1,-0.4 0.3,-0.7 0.4,-1c0.2,-0.4 0.5,-0.7 0.9,-1c0.1,-0.3 0.8,-2.5 2.1,-6.6c1.3,-4.1 2.5,-7.9 3.5,-11.4c2.9,-8.9 5.7,-17.1 8.5,-24.7C3.7,102 7.1,94.3 11,86.9c4.1,-7.8 8.4,-14.2 13.2,-19.2s9.5,-7.5 14.4,-7.5c4,0 6.8,1.4 8.6,4.3c1.8,2.8 2.7,6.6 2.7,11.4c0,4.4 -0.6,9.2 -1.9,14.5l-11.1,42c-1.1,6.4 -1.7,10.7 -1.7,12.9c0,5.3 1.8,7.9 5.4,7.9c2.1,0 4.2,-0.5 6.1,-1.5c2,-1 3.8,-1.3 5.3,-2.5c1.5,-1.2 6.4,-4.9 6.4,-4.9s5.8,-0.1 6.1,-0.4l2.2,4.2c-11,12.3 -24,12.2 -34.2,12.2c-5.9,0 -10.6,-1.9 -14.3,-5.9s-5.5,-9 -5.5,-15.3c0,-2.5 0.2,-4.9 0.7,-7.3c0.4,-2.6 1.1,-6 1.9,-10.1l13.4,-50.9c0.2,-0.4 0.4,-0.9 0.4,-1.3c0.1,-0.4 0.2,-0.8 0.3,-1.2l-0.8,-0.9c-0.7,0 -4.1,5 -9.9,14.9C10,98.7 0.3,121.4 -10.3,150.5c-2.5,7.3 -6,10.9 -10.8,10.9c-2.3,0 -4.6,-0.9 -6.7,-2.8c-2.1,-1.8 -3.8,-4.4 -5.1,-7.6c-1.3,-3.2 -1.9,-6.8 -1.9,-10.7c0,-3.4 0.5,-6.7 1.6,-10L-2.2,-2.2L23.9,-10L-14.7,151.2zM163.8,148.5H73.7c0,0 -5.2,-0.4 -8.9,2.3l-2.4,1.4l-6.4,-6l4.4,-3.4c0,0 5.3,-4 13.1,-4h90.3"
+        android:strokeAlpha="0.2"
+        android:fillColor="#F5F8F9"
+        android:fillAlpha="0.2"/>
+  </group>
+  <path
+      android:pathData="M0,0h90v160h-90z"
+      android:strokeAlpha="0.85"
+      android:fillAlpha="0.85">
+    <aapt:attr name="android:fillColor">
+      <gradient 
+          android:gradientRadius="55.07784"
+          android:centerX="44.999817"
+          android:centerY="80.001976"
+          android:type="radial">
+        <item android:offset="0" android:color="#890DACC4"/>
+        <item android:offset="0.2753" android:color="#A91491AA"/>
+        <item android:offset="0.5843" android:color="#CE187A96"/>
+        <item android:offset="0.837" android:color="#EB186E8B"/>
+        <item android:offset="1" android:color="#FF186987"/>
+      </gradient>
+    </aapt:attr>
+  </path>
+</vector>

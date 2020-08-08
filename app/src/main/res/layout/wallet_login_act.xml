@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 10/10/2018 Hahalolo. All rights reserved.
+  ~
+  ~ https://help.hahalolo.com/commercial_terms/
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bg_login_wallet" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/logo_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/wallet_hahalolo_icon" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nested_scroll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:paddingStart="32dp"
+            android:paddingLeft="32dp"
+            android:paddingEnd="32dp"
+            android:paddingRight="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo_iv"
+            app:layout_constraintVertical_bias="0.25">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/content_wr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="50dp">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/title_tv"
+                    style="@style/Halo.TextView.Header"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="LOGIN WALLET"
+                    android:textColor="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/caption_tv"
+                    style="@style/Halo.TextView.Body2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_horizontal"
+                    android:text="Enter your Hahalolo account continue"
+                    android:textColor="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/title_tv" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/username_edt"
+                    style="@style/Halo.EditTextBackground.OneLine"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="32dp"
+                    android:drawableStart="@drawable/ic_user_signin"
+                    android:drawableLeft="@drawable/ic_user_signin"
+                    android:drawablePadding="12dp"
+                    android:hint="@string/sign_in_username_hint"
+                    android:inputType="textEmailAddress"
+                    android:nextFocusForward="@+id/password_edt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/caption_tv"
+                    tools:ignore="RtlHardcoded" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/password_edt"
+                    style="@style/Halo.EditTextBackground"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="12dp"
+                    android:drawableStart="@drawable/ic_password_signin"
+                    android:drawableLeft="@drawable/ic_password_signin"
+                    android:drawablePadding="12dp"
+                    android:hint="@string/sign_in_password_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/username_edt"
+                    tools:ignore="RtlHardcoded" />
+
+                <LinearLayout
+                    android:id="@+id/login_wr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/password_edt">
+
+                    <android.support.design.button.MaterialButton
+                        android:id="@+id/login_bt"
+                        style="@style/Halo.Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="120dp"
+                        android:text="@string/login_handler_button"
+                        android:textColor="@color/halo_theme_text_primary_color"
+                        app:backgroundTint="@color/wallet_login"
+                        app:textAllCaps="true" />
+                </LinearLayout>
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.constraint.ConstraintLayout>
+</layout>

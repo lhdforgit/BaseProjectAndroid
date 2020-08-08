@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ /*
+  ~  * Copyright 10/10/2018 Hahalolo. All rights reserved.
+  ~  *
+  ~  * https://help.hahalolo.com/commercial_terms/
+  ~  */
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            style="@style/Halo.AppBarLayout">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                style="@style/Halo.Toolbar"
+                app:navigationIcon="@drawable/ic_back"
+                app:title="Payout Account Details" />
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="64dp">
+
+                <com.hahalolo.android.wallet.presentation.payoutaccountdetail.view.PayoutAccoutInforItem
+                    android:id="@+id/payout_account_infor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.hahalolo.android.wallet.presentation.payoutaccountdetail.view.PayoutAccoutInforItem>
+
+                <com.hahalolo.android.wallet.presentation.payoutaccountdetail.view.PayoutAccoutOwnerItem
+                    android:id="@+id/payout_account_owner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.hahalolo.android.wallet.presentation.payoutaccountdetail.view.PayoutAccoutOwnerItem>
+
+                <com.hahalolo.android.wallet.presentation.payoutaccountdetail.view.PayoutAccoutTaxFormItem
+                    android:id="@+id/payout_account_tax_form"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.hahalolo.android.wallet.presentation.payoutaccountdetail.view.PayoutAccoutTaxFormItem>
+
+                <com.hahalolo.android.wallet.presentation.payoutaccountdetail.view.PayoutAccoutPaymentMethodItem
+                    android:id="@+id/payout_account_payment_method"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.hahalolo.android.wallet.presentation.payoutaccountdetail.view.PayoutAccoutPaymentMethodItem>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/colorChipViewBackground" />
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:paddingStart="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingTop="@dimen/activity_horizontal_margin"
+            android:paddingEnd="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin"
+            android:paddingBottom="12dp"
+            android:visibility="gone">
+
+        </FrameLayout>
+    </android.support.design.widget.CoordinatorLayout>
+</layout>
